@@ -51,9 +51,10 @@ export default function Login() {
             <button className="btn-login">Login</button>
           </form>
 
-          <button className="btn-public">
+          <Link to="/kurikulum" className="btn-public">
             Akses Kurikulum OBE Publik
-          </button>
+        </Link>
+
         </div>
       </div>
 

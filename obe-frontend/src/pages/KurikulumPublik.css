@@ -1,0 +1,247 @@
+/* =========================================================
+   GLOBAL BASE
+   ========================================================= */
+.kurikulum-page {
+  min-height: 100vh;
+  background: #faf7f2;
+  color: #241705;
+  font-family: "Inter", sans-serif;
+}
+
+/* =========================================================
+   HEADER (NO WHITE GAP)
+   ========================================================= */
+.kurikulum-header {
+  padding: 120px 20px 80px; /* offset navbar */
+  text-align: center;
+  background: linear-gradient(180deg, #2b1606 0%, #bc430d 100%);
+  color: #fff;
+}
+
+.kurikulum-header h1 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.kurikulum-header p {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+/* =========================================================
+   SECTION WRAPPER
+   ========================================================= */
+.kurikulum-section {
+  padding: 70px 8%;
+}
+
+.kurikulum-section.light {
+  background: #efe3cc;
+}
+
+.kurikulum-section h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+/* =========================================================
+   FILTER (PRODI & PERIODE)
+   ========================================================= */
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.filter-item label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.filter-item select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+}
+
+/* =========================================================
+   INFORMASI PROGRAM STUDI
+   ========================================================= */
+.prodi-info-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* CARD BASE */
+.prodi-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.prodi-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.prodi-card p {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+/* =========================================================
+   MASTER CPL (SELARAS KETUA PRODI)
+   ========================================================= */
+.master-cpl {
+  background: #fff;
+  color: #241705;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  border-left: 6px solid #bc430d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.master-cpl h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: #bc430d;
+}
+
+.master-cpl .cpl-total {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.master-cpl .cpl-label {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.master-cpl .cpl-year {
+  margin-top: 8px;
+  display: inline-block;
+  background: #efe3cc;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   TABLE MATA KULIAH
+   ========================================================= */
+.table-wrapper {
+  margin-top: 24px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background: #f3e6d1;
+  font-weight: 600;
+}
+
+tbody tr:hover {
+  background: #faf3e8;
+}
+
+/* BUTTON RPS */
+.btn-rps {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #bc430d;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-rps:hover {
+  background: #a53a0b;
+}
+
+/* =========================================================
+   FOOTER ACTION
+   ========================================================= */
+.kurikulum-footer {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-primary {
+  padding: 12px 22px;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #241705, #bc430d);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  padding: 12px 22px;
+  border-radius: 30px;
+  border: 1px solid #bc430d;
+  color: #bc430d;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 992px) {
+  .prodi-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .kurikulum-section {
+    padding: 50px 20px;
+  }
+
+  .kurikulum-header h1 {
+    font-size: 28px;
+  }
+
+  .kurikulum-header p {
+    font-size: 14px;
+  }
+}
