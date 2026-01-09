@@ -1,0 +1,64 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: linear-gradient(90deg, #241705, #BC430D);
+}
+
+.navbar__container {
+  max-width: var(--container-width);
+  margin: auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: 600;
+}
+
+.navbar__brand img {
+  width: 34px;
+}
+
+.navbar__menu {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.navbar__menu li {
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.navbar__actions {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn--outline {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn--solid {
+  background: white;
+  border: none;
+  color: #BC430D;
+}

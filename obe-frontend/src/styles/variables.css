@@ -1,0 +1,17 @@
+:root {
+  --pearl: #E6D8BD;
+  --cocoa-brown: #C97338;
+  --rust: #D3541A;
+  --seal-brown: #65371F;
+  --eerie-black: #241705;
+
+  --text-dark: #1f1f1f;
+  --text-light: #ffffff;
+
+  --container-width: 1200px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
