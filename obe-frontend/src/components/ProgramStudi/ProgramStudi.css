@@ -1,0 +1,109 @@
+/* =========================
+   SECTION WRAPPER
+   ========================= */
+.prodi-section {
+  background-color: #ffffff;
+  padding: 100px 0;
+}
+
+/* =========================
+   CONTAINER (SAMA DENGAN ABOUT)
+   ========================= */
+.prodi-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+.prodi-header {
+  max-width: 800px;
+  margin-bottom: 72px;
+}
+
+.prodi-header h2 {
+  font-size: 36px;
+  color: var(--seal-brown);
+  margin-bottom: 16px;
+}
+
+.prodi-header p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* =========================
+   GRID
+   ========================= */
+.prodi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* =========================
+   CARD
+   ========================= */
+.prodi-card {
+  background: var(--pearl);
+  padding: 32px;
+  border-radius: 18px;
+  position: relative;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.prodi-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+}
+
+.prodi-card h3 {
+  font-size: 20px;
+  color: var(--seal-brown);
+  margin-bottom: 12px;
+}
+
+.prodi-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* =========================
+   TAG (S1 / D4)
+   ========================= */
+.prodi-tag {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  background: var(--rust);
+  color: white;
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 1024px) {
+  .prodi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .prodi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prodi-header h2 {
+    font-size: 28px;
+  }
+}
