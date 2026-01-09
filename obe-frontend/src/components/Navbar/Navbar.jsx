@@ -1,5 +1,6 @@
-
-import { useState } from "react";import "./Navbar.css";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 import logoUntidar from "../../assets/images/LogoUntidar.png";
 
 export default function Navbar() {
@@ -18,37 +19,40 @@ export default function Navbar() {
         {/* MENU DESKTOP */}
         <nav className="navbar__nav">
           <ul className="navbar__menu">
-            <li>Tentang</li>
-            <li>Program Studi</li>
-            <li>Panduan OBE</li>
-            <li>Fitur Sistem</li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#program-studi">Program Studi</a></li>
+            <li><a href="#panduan">Panduan OBE</a></li>
+            <li><a href="#fitur">Fitur Sistem</a></li>
           </ul>
         </nav>
 
-        {/* ACTION DESKTOP */}
+        {/* LOGIN (PAKAI ROUTER) */}
         <div className="navbar__actions">
-          <button className="btn btn--login">Login</button>
+          <Link to="/login">
+            <button className="btn btn--login">Login</button>
+          </Link>
         </div>
 
-        {/* HAMBURGER (MOBILE) */}
+        {/* HAMBURGER */}
         <button
           className="navbar__toggle"
           onClick={() => setOpen(!open)}
-          aria-label="Toggle navigation"
         >
           ☰
         </button>
       </div>
 
-      {/* MENU MOBILE */}
+      {/* MOBILE MENU */}
       {open && (
         <div className="navbar__mobile">
           <ul>
-            <li>Tentang</li>
-            <li>Program Studi</li>
-            <li>Panduan OBE</li>
-            <li>Fitur Sistem</li>
-            <li className="mobile-login">Login</li>
+            <li><a href="#about" onClick={() => setOpen(false)}>Tentang</a></li>
+            <li><a href="#program-studi" onClick={() => setOpen(false)}>Program Studi</a></li>
+            <li><a href="#panduan" onClick={() => setOpen(false)}>Panduan OBE</a></li>
+            <li><a href="#fitur" onClick={() => setOpen(false)}>Fitur Sistem</a></li>
+            <li className="mobile-login">
+              <Link to="/login" onClick={() => setOpen(false)}>Login</Link>
+            </li>
           </ul>
         </div>
       )}

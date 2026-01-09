@@ -6,7 +6,7 @@
   top: 0;
   width: 100%;
   height: var(--navbar-height);
-  z-index: 1000;
+  z-index: 9999;
 
   background: linear-gradient(
     90deg,

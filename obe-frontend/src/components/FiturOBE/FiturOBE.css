@@ -1,0 +1,97 @@
+/* =========================
+   SECTION WRAPPER
+   ========================= */
+.fitur-obe {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(230, 216, 189, 0.6) 100%
+  );
+  padding: 100px 0;
+}
+
+/* =========================
+   CONTAINER
+   ========================= */
+.fitur-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+.fitur-header {
+  max-width: 800px;
+  margin-bottom: 72px;
+}
+
+.fitur-header h2 {
+  font-size: 36px;
+  color: var(--seal-brown);
+  margin-bottom: 16px;
+}
+
+.fitur-header p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* =========================
+   GRID
+   ========================= */
+.fitur-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* =========================
+   CARD
+   ========================= */
+.fitur-card {
+  background: #ffffff;
+  padding: 36px 32px;
+  border-radius: 18px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fitur-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.12);
+}
+
+.fitur-card h3 {
+  font-size: 20px;
+  color: var(--cocoa-brown);
+  margin-bottom: 12px;
+}
+
+.fitur-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 1024px) {
+  .fitur-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .fitur-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fitur-header h2 {
+    font-size: 28px;
+  }
+}

@@ -2,7 +2,7 @@ import "./AboutOBE.css";
 
 export default function AboutOBE() {
   return (
-    <section className="about-obe">
+    <section id="about" className="about-obe">
       <div className="about-container">
 
         {/* ================= HEADER ================= */}

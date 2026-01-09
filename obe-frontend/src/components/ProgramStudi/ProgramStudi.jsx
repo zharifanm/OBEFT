@@ -2,7 +2,7 @@ import "./ProgramStudi.css";
 
 export default function ProgramStudi() {
   return (
-    <section className="prodi-section">
+    <section id="program-studi" className="program-studi">
       <div className="prodi-container">
 
         {/* HEADER */}

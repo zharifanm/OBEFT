@@ -1,0 +1,97 @@
+/* =========================
+   FOOTER WRAPPER
+   ========================= */
+.footer {
+  background: linear-gradient(
+    180deg,
+    #241705 0%,
+    #65371F 100%
+  );
+  color: #ffffff;
+}
+
+/* =========================
+   CONTAINER
+   ========================= */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 24px;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 48px;
+}
+
+/* =========================
+   BRAND
+   ========================= */
+.footer-brand h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.footer-brand p {
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* =========================
+   NAV
+   ========================= */
+.footer-nav h4,
+.footer-info h4 {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li {
+  font-size: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.footer-nav li:hover {
+  opacity: 1;
+}
+
+/* =========================
+   INFO
+   ========================= */
+.footer-info p {
+  font-size: 15px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* =========================
+   BOTTOM
+   ========================= */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
+  padding: 20px 24px;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
