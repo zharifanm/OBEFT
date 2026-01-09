@@ -1,152 +1,153 @@
-/* =========================
-   PAGE WRAPPER
-   ========================= */
+/* PAGE */
 .login-page {
-  min-height: 100vh;
-  background: url("../assets/images/bg-login.jpg");
-
-  position: relative;
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* overlay gelap */
+/* OVERLAY */
 .login-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(36, 23, 5, 0.65);
+  background: linear-gradient(
+    90deg,
+    rgba(36, 23, 5, 0.75),
+    rgba(188, 67, 13, 0.55)
+  );
+  z-index: 1;
 }
 
-/* =========================
-   CONTAINER
-   ========================= */
+/* CONTAINER */
 .login-container {
   position: relative;
   z-index: 2;
-  max-width: 1100px;
-  width: 100%;
-  margin: 0 24px;
-
+  width: 90%;
+  max-width: 1200px;
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 48px;
   align-items: center;
 }
 
-/* =========================
-   LEFT INFO
-   ========================= */
+/* LEFT */
 .login-info {
-  color: #ffffff;
+  color: #fff;
+}
+
+.login-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  background: rgba(255,255,255,0.15);
+  margin-bottom: 18px;
 }
 
 .login-info h1 {
   font-size: 42px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .login-info h2 {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .login-info p {
-  font-size: 16px;
-  line-height: 1.8;
-  max-width: 480px;
-  opacity: 0.95;
-}
-
-/* =========================
-   LOGIN CARD
-   ========================= */
-.login-card {
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 18px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-}
-
-.login-card h3 {
-  font-size: 24px;
-  margin-bottom: 28px;
-  color: #241705;
-}
-
-/* =========================
-   FORM
-   ========================= */
-.login-form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.login-form label {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  font-size: 14px;
-}
-
-.login-form span {
-  color: #444;
-}
-
-.login-form input,
-.login-form select {
-  padding: 12px 14px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-}
-
-.login-form input:focus,
-.login-form select:focus {
-  outline: none;
-  border-color: #BC430D;
-}
-
-/* =========================
-   BUTTON
-   ========================= */
-.btn-login {
-  margin-top: 12px;
-  padding: 14px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-
-  background: linear-gradient(
-    90deg,
-    #241705 0%,
-    #BC430D 100%
-  );
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.btn-login:hover {
+  max-width: 520px;
+  line-height: 1.7;
+  font-size: 15px;
   opacity: 0.9;
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+/* CARD */
+.login-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 36px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+}
+
+.login-card h3 {
+  font-size: 22px;
+  margin-bottom: 24px;
+  color: #241705;
+}
+
+/* FORM */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  padding: 11px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* LOGIN BUTTON */
+.btn-login {
+  margin-top: 12px;
+  width: 100%;
+  padding: 13px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(90deg, #241705, #bc430d);
+}
+
+/* PUBLIC */
+.btn-public {
+  margin-top: 14px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* BACK HOME */
+.btn-back-home {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 3;
+  background: #fff;
+  color: #241705;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .login-container {
     grid-template-columns: 1fr;
-    gap: 32px;
   }
 
   .login-info {
-    text-align: center;
-  }
-
-  .login-info p {
-    margin: 0 auto;
+    display: none;
   }
 }

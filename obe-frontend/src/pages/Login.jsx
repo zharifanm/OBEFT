@@ -1,70 +1,65 @@
+import { Link } from "react-router-dom";
 import "./Login.css";
-import { useState } from "react";
+import bgLogin from "../assets/images/bg-login.jpg";
 
 export default function Login() {
-  const [role, setRole] = useState("dosen");
-
   return (
-    <div className="login-page">
-      {/* Overlay */}
+    <div
+      className="login-page"
+      style={{ backgroundImage: `url(${bgLogin})` }}
+    >
       <div className="login-overlay"></div>
 
       <div className="login-container">
-
-        {/* LEFT SIDE */}
+        {/* LEFT CONTENT */}
         <div className="login-info">
+          <span className="login-badge">Sistem Akademik</span>
           <h1>Kurikulum OBE</h1>
           <h2>Fakultas Teknik<br />Universitas Tidar</h2>
           <p>
-            Sistem Kurikulum Outcome Based Education untuk mendukung
-            pengelolaan pembelajaran, asesmen, dan evaluasi capaian
-            pembelajaran secara terintegrasi.
+            Sistem Kurikulum Outcome Based Education yang dirancang
+            untuk mendukung pengelolaan pembelajaran, asesmen,
+            serta evaluasi capaian pembelajaran secara terintegrasi
+            dan berkelanjutan.
           </p>
         </div>
 
-        {/* RIGHT SIDE */}
+        {/* LOGIN CARD */}
         <div className="login-card">
           <h3>Silahkan Login</h3>
 
-          <form className="login-form">
-            {/* ROLE */}
-            <label>
-              <span>* Login Sebagai</span>
-              <select
-                value={role}
-                onChange={(e) => setRole(e.target.value)}
-              >
-                <option value="admin">Admin</option>
-                <option value="dosen">Dosen</option>
-                <option value="mahasiswa">Mahasiswa</option>
+          <form>
+            <div className="form-group">
+              <label>Login Sebagai</label>
+              <select>
+                <option>Admin</option>
+                <option>Dosen</option>
+                <option>Mahasiswa</option>
               </select>
-            </label>
+            </div>
 
-            {/* USERNAME */}
-            <label>
-              <span>* NIM / Kode Dosen</span>
-              <input
-                type="text"
-                placeholder="Masukkan NIM atau Kode Dosen"
-              />
-            </label>
+            <div className="form-group">
+              <label>NIM / Kode Dosen</label>
+              <input placeholder="Masukkan NIM atau Kode Dosen" />
+            </div>
 
-            {/* PASSWORD */}
-            <label>
-              <span>* Password</span>
-              <input
-                type="password"
-                placeholder="Masukkan password"
-              />
-            </label>
+            <div className="form-group">
+              <label>Password</label>
+              <input type="password" placeholder="Masukkan password" />
+            </div>
 
-            <button type="submit" className="btn-login">
-              Login
-            </button>
+            <button className="btn-login">Login</button>
           </form>
-        </div>
 
+          <button className="btn-public">
+            Akses Kurikulum OBE Publik
+          </button>
+        </div>
       </div>
+
+      <Link to="/" className="btn-back-home">
+        ← Kembali ke Home
+      </Link>
     </div>
   );
 }
