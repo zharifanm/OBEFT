@@ -1,53 +1,100 @@
+/* =========================
+   HERO WRAPPER
+   ========================= */
 .hero {
-  min-height: 100vh;
+  min-height: calc(100vh - var(--navbar-height));
   background-size: cover;
   background-position: center;
-  padding-top: 70px;
+  background-repeat: no-repeat;
 }
 
+/* =========================
+   OVERLAY
+   ========================= */
 .hero__overlay {
-  min-height: 100vh;
-  background: rgba(36, 23, 5, 0.6);
+  min-height: calc(100vh - var(--navbar-height));
+  background: rgba(36, 23, 5, 0.65);
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* =========================
+   CONTENT
+   ========================= */
 .hero__content {
-  text-align: center;
-  color: white;
   max-width: 900px;
   padding: 0 24px;
+  text-align: center;
+  color: white;
+
+  transform: translateY(-12px);
 }
 
 .hero__content h1 {
-  font-size: 56px;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .hero__content h2 {
-  font-size: 40px;
-  margin: 12px 0;
+  font-size: clamp(24px, 3.5vw, 44px);
+  font-weight: 600;
+  margin-bottom: 16px;
 }
 
 .hero__content p {
-  font-size: 18px;
-  margin-bottom: 40px;
+  font-size: clamp(15px, 2.2vw, 20px);
+  margin-bottom: 48px;
+  opacity: 0.95;
 }
 
+/* =========================
+   ACTION BUTTONS
+   ========================= */
 .hero__actions {
   display: flex;
   justify-content: center;
   gap: 36px;
+  flex-wrap: wrap;
 }
 
 .btn--primary {
   background: var(--rust);
-  border: none;
   color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .btn--ghost {
   background: transparent;
-  border: 2px solid white;
   color: white;
+  border: 2px solid white;
+  padding: 14px 32px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+   ========================= */
+@media (max-width: 768px) {
+  .hero__content {
+    transform: translateY(-6px);
+  }
+
+  .hero__actions {
+    gap: 20px;
+  }
+
+  .btn--primary,
+  .btn--ghost {
+    width: 100%;
+    max-width: 280px;
+  }
 }

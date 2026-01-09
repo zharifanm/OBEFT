@@ -1,113 +1,153 @@
+/* =========================
+   SECTION WRAPPER
+   ========================= */
 .about-obe {
-  background: #ffffff;
-  padding: 100px 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(36, 23, 5, 0.12) 0%,
+    #ffffff 35%
+  );
+  padding: 80px 0 120px;
 }
 
-.about-obe__container {
-  max-width: 1100px;
+/* =========================
+   MAIN CONTAINER (KUNCI!)
+   ========================= */
+.about-container {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
-/* ===== HEADER ===== */
-.about-obe__header {
+/* =========================
+   HEADER
+   ========================= */
+.about-header {
+  text-align: center;
   max-width: 800px;
-  margin-bottom: 64px;
+  margin: 0 auto 72px;
 }
 
-.about-obe__header h2 {
-  font-size: 40px;
+.about-header h2 {
+  font-size: 36px;
   color: var(--seal-brown);
   margin-bottom: 16px;
 }
 
-.about-obe__header p {
+.about-header p {
   font-size: 18px;
   line-height: 1.8;
-  color: var(--text-dark);
+  color: #444;
 }
 
-/* ===== SECTION ===== */
-.about-obe__section {
-  margin-bottom: 72px;
+/* =========================
+   SECTION TITLE
+   ========================= */
+.section-title {
+  font-size: 30px;
+  color: var(--seal-brown);
+  margin-bottom: 32px;
 }
 
-.about-obe__section--alt {
+/* =========================
+   MANFAAT GRID
+   ========================= */
+.manfaat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 96px;
+}
+
+.manfaat-card {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.manfaat-card h4 {
+  color: var(--cocoa-brown);
+  margin-bottom: 12px;
+}
+
+.manfaat-card p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================
+   LANDASAN
+   ========================= */
+.landas-box {
   background: var(--pearl);
   padding: 48px;
-  border-radius: 12px;
+  border-radius: 18px;
+  margin-bottom: 96px;
 }
 
-.about-obe__section h3 {
-  font-size: 28px;
-  color: var(--cocoa-brown);
-  margin-bottom: 16px;
-}
-
-.about-obe__section p {
-  font-size: 17px;
-  line-height: 1.7;
-  margin-bottom: 16px;
-}
-
-/* ===== LIST ===== */
-.about-obe__list {
+.landas-box ul {
   padding-left: 20px;
 }
 
-.about-obe__list li {
+.landas-box li {
   font-size: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-/* ===== STEPS ===== */
-.about-obe__steps {
+/* =========================
+   TAHAPAN GRID
+   ========================= */
+.tahapan-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  margin-top: 32px;
 }
 
-.obe-step {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 28px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  position: relative;
-}
-
-.obe-step__number {
-  position: absolute;
-  top: -14px;
-  left: -14px;
-  background: var(--rust);
+.tahapan-card {
+  background: var(--seal-brown);
   color: white;
-  font-weight: bold;
-  width: 36px;
-  height: 36px;
+  padding: 32px 24px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.tahapan-card span {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  background: var(--rust);
   border-radius: 50%;
-  display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: bold;
+  margin-bottom: 16px;
 }
 
-.obe-step h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: var(--seal-brown);
-}
-
-.obe-step p {
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .about-obe__header h2 {
-    font-size: 32px;
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 1024px) {
+  .manfaat-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .about-obe__section--alt {
-    padding: 32px 24px;
+  .tahapan-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .manfaat-grid,
+  .tahapan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-header h2 {
+    font-size: 28px;
+  }
+
+  .section-title {
+    font-size: 24px;
   }
 }

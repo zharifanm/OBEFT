@@ -3,91 +3,100 @@ import "./AboutOBE.css";
 export default function AboutOBE() {
   return (
     <section className="about-obe">
-      <div className="about-obe__container">
+      <div className="about-container">
 
-        {/* ===== JUDUL UTAMA ===== */}
-        <div className="about-obe__header">
+        {/* ================= HEADER ================= */}
+        <div className="about-header">
           <h2>Tentang Outcome Based Education (OBE)</h2>
           <p>
             Outcome Based Education (OBE) merupakan pendekatan pendidikan yang
-            berfokus pada capaian pembelajaran lulusan sebagai dasar perencanaan,
-            pelaksanaan, penilaian, dan evaluasi kurikulum.
+            menempatkan capaian pembelajaran sebagai dasar utama dalam
+            perancangan kurikulum, proses pembelajaran, dan sistem evaluasi.
+            Pendekatan ini memastikan bahwa lulusan memiliki kompetensi yang
+            relevan, terukur, dan sesuai dengan kebutuhan pemangku kepentingan.
           </p>
         </div>
 
-        {/* ===== MANFAAT ===== */}
-        <div className="about-obe__section">
-          <h3>Manfaat Implementasi OBE</h3>
-          <p>
-            Implementasi OBE mendorong pendekatan pembelajaran yang terstruktur,
-            relevan dengan kebutuhan dunia kerja, serta berorientasi pada
-            peningkatan mutu lulusan secara berkelanjutan.
-          </p>
+        {/* ================= MANFAAT ================= */}
+        <h3 className="section-title">Manfaat Implementasi OBE</h3>
+        <div className="manfaat-grid">
 
-          <ul className="about-obe__list">
-            <li>Fokus pada hasil akhir pembelajaran yang terukur</li>
-            <li>Restrukturisasi kurikulum dan asesmen untuk mendukung CPL</li>
-            <li>Peningkatan kualitas lulusan melalui pendekatan sistematis</li>
-          </ul>
-        </div>
-
-        {/* ===== LANDASAN ===== */}
-        <div className="about-obe__section about-obe__section--alt">
-          <h3>Landasan & Regulasi</h3>
-          <p>
-            Implementasi OBE mengacu pada regulasi dan standar nasional
-            pendidikan tinggi sebagai berikut:
-          </p>
-
-          <ul className="about-obe__list">
-            <li>Permendikbud No. 3 Tahun 2020 tentang SN-DIKTI</li>
-            <li>Kerangka Kualifikasi Nasional Indonesia (KKNI)</li>
-            <li>Standar akreditasi BAN-PT dan LAM</li>
-            <li>Kebutuhan industri dan hasil tracer study</li>
-          </ul>
-        </div>
-
-        {/* ===== TAHAPAN ===== */}
-        <div className="about-obe__section">
-          <h3>Tahapan Implementasi OBE</h3>
-
-          <div className="about-obe__steps">
-            <div className="obe-step">
-              <span className="obe-step__number">1</span>
-              <h4>Menyusun Profil & CPL</h4>
-              <p>
-                Mengidentifikasi profil lulusan dan menyusun CPL sesuai
-                kebutuhan industri dan SN-DIKTI.
-              </p>
-            </div>
-
-            <div className="obe-step">
-              <span className="obe-step__number">2</span>
-              <h4>Menurunkan CPL → CPMK</h4>
-              <p>
-                Memetakan CPL ke mata kuliah melalui CPMK yang selaras dan
-                terukur.
-              </p>
-            </div>
-
-            <div className="obe-step">
-              <span className="obe-step__number">3</span>
-              <h4>Metode Pembelajaran & RPS</h4>
-              <p>
-                Mengembangkan RPS dan aktivitas pembelajaran berbasis
-                CPL/CPMK.
-              </p>
-            </div>
-
-            <div className="obe-step">
-              <span className="obe-step__number">4</span>
-              <h4>Asesmen & CQI</h4>
-              <p>
-                Asesmen berbasis rubrik dan perbaikan berkelanjutan
-                (Continuous Quality Improvement).
-              </p>
-            </div>
+          <div className="manfaat-card">
+            <h4>Berorientasi Capaian</h4>
+            <p>
+              Proses pembelajaran difokuskan pada hasil akhir yang terukur dan
+              relevan dengan profil lulusan Fakultas Teknik Universitas Tidar.
+            </p>
           </div>
+
+          <div className="manfaat-card">
+            <h4>Kurikulum Terstruktur</h4>
+            <p>
+              Keterkaitan antara CPL, CPMK, metode pembelajaran, serta asesmen
+              disusun secara sistematis dan terintegrasi.
+            </p>
+          </div>
+
+          <div className="manfaat-card">
+            <h4>Peningkatan Mutu</h4>
+            <p>
+              Evaluasi berbasis data mendukung perbaikan berkelanjutan serta
+              peningkatan kualitas lulusan dan tata kelola akademik.
+            </p>
+          </div>
+
+        </div>
+
+        {/* ================= LANDASAN ================= */}
+        <h3 className="section-title">Landasan & Regulasi</h3>
+        <div className="landas-box">
+          <ul>
+            <li>Permendikbud No. 3 Tahun 2020 tentang Standar Nasional Pendidikan Tinggi</li>
+            <li>Kerangka Kualifikasi Nasional Indonesia (KKNI)</li>
+            <li>Standar dan kebijakan akreditasi BAN-PT serta LAM</li>
+            <li>Kebutuhan dunia industri dan hasil tracer study lulusan</li>
+          </ul>
+        </div>
+
+        {/* ================= TAHAPAN ================= */}
+        <h3 className="section-title">
+          Tahapan Implementasi OBE Fakultas Teknik
+        </h3>
+
+        <div className="tahapan-grid">
+
+          <div className="tahapan-card">
+            <span>1</span>
+            <p>
+              Penetapan profil lulusan dan capaian pembelajaran lulusan (CPL)
+              sesuai visi dan misi Fakultas Teknik.
+            </p>
+          </div>
+
+          <div className="tahapan-card">
+            <span>2</span>
+            <p>
+              Penurunan CPL ke dalam capaian pembelajaran mata kuliah (CPMK)
+              secara terstruktur dan terukur.
+            </p>
+          </div>
+
+          <div className="tahapan-card">
+            <span>3</span>
+            <p>
+              Penyusunan RPS serta metode pembelajaran yang mendukung pencapaian
+              CPMK pada setiap mata kuliah.
+            </p>
+          </div>
+
+          <div className="tahapan-card">
+            <span>4</span>
+            <p>
+              Pelaksanaan asesmen berbasis rubrik serta perbaikan berkelanjutan
+              melalui Continuous Quality Improvement (CQI).
+            </p>
+          </div>
+
         </div>
 
       </div>

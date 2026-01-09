@@ -1,4 +1,6 @@
 :root {
+  --navbar-height: 64px;
+
   --pearl: #E6D8BD;
   --cocoa-brown: #C97338;
   --rust: #D3541A;
@@ -13,5 +15,6 @@
 
 body {
   margin: 0;
+  padding-top: var(--navbar-height);
   font-family: Arial, Helvetica, sans-serif;
 }
