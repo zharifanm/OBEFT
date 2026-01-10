@@ -14,8 +14,9 @@ export default function Hero() {
           <p>Fakultas Teknik Universitas Tidar</p>
 
           <div className="hero__actions">
-            <button className="btn btn--primary">Pelajari OBE</button>
-            <button className="btn btn--ghost">Panduan Sistem</button>
+            <button className="btn btn--hero">
+              Panduan Sistem
+            </button>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
    HERO WRAPPER
    ========================= */
 .hero {
-  min-height: calc(100vh - var(--navbar-height));
+  min-height: calc(100vh - 72px); /* tinggi navbar */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -12,7 +12,7 @@
    OVERLAY
    ========================= */
 .hero__overlay {
-  min-height: calc(100vh - var(--navbar-height));
+  min-height: calc(100vh - 72px);
   background: rgba(36, 23, 5, 0.65);
 
   display: flex;
@@ -27,73 +27,58 @@
   max-width: 900px;
   padding: 0 24px;
   text-align: center;
-  color: white;
-
-  transform: translateY(-12px);
+  color: #ffffff;
 }
 
 .hero__content h1 {
-  font-size: clamp(36px, 5vw, 64px);
+  font-size: clamp(36px, 5vw, 60px);
   font-weight: 700;
   margin-bottom: 8px;
 }
 
 .hero__content h2 {
-  font-size: clamp(24px, 3.5vw, 44px);
+  font-size: clamp(24px, 3.5vw, 42px);
   font-weight: 600;
   margin-bottom: 16px;
 }
 
 .hero__content p {
-  font-size: clamp(15px, 2.2vw, 20px);
-  margin-bottom: 48px;
+  font-size: clamp(15px, 2.2vw, 18px);
+  margin-bottom: 42px;
   opacity: 0.95;
 }
 
 /* =========================
-   ACTION BUTTONS
+   ACTION (SINGLE BUTTON)
    ========================= */
 .hero__actions {
   display: flex;
   justify-content: center;
-  gap: 36px;
-  flex-wrap: wrap;
 }
 
-.btn--primary {
-  background: var(--rust);
-  color: white;
+.btn--hero {
+  background: #bc430d;
+  color: #ffffff;
   border: none;
-  padding: 14px 32px;
+  padding: 14px 40px;
   font-size: 16px;
-  border-radius: 4px;
+  font-weight: 600;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.btn--ghost {
-  background: transparent;
-  color: white;
-  border: 2px solid white;
-  padding: 14px 32px;
-  font-size: 16px;
-  border-radius: 4px;
-  cursor: pointer;
+.btn--hero:hover {
+  background: #d45512;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
 }
 
 /* =========================
-   MOBILE OPTIMIZATION
+   MOBILE
    ========================= */
 @media (max-width: 768px) {
-  .hero__content {
-    transform: translateY(-6px);
-  }
-
-  .hero__actions {
-    gap: 20px;
-  }
-
-  .btn--primary,
-  .btn--ghost {
+  .btn--hero {
     width: 100%;
     max-width: 280px;
   }
