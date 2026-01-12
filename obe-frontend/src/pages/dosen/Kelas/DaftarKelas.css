@@ -1,0 +1,26 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  margin-top: 24px;
+}
+
+th, td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+th {
+  background: #f3e6d1;
+}
+
+a {
+  color: #bc430d;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

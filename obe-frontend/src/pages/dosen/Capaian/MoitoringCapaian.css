@@ -1,0 +1,9 @@
+.status-ok {
+  color: green;
+  font-weight: 600;
+}
+
+.status-warning {
+  color: red;
+  font-weight: 600;
+}

@@ -1,0 +1,29 @@
+.sidebar-dosen {
+  width: 240px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #241705, #bc430d);
+  color: #fff;
+  padding: 30px 20px;
+}
+
+.sidebar-title {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.sidebar-dosen nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar-dosen a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.sidebar-dosen a:hover {
+  opacity: 1;
+}

@@ -1,0 +1,48 @@
+.dosen-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #faf7f2;
+}
+
+.dosen-content {
+  flex: 1;
+  padding: 40px;
+}
+
+.dosen-content h1 {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  opacity: 0.7;
+  margin-bottom: 30px;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.dosen-section h2 {
+  margin-bottom: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background: #f3e6d1;
+}
